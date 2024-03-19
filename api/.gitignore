@@ -1,0 +1,18 @@
+# Ignore Python virtual environment
+/.env/
+
+# Ignore any compiled Python files
+*.pyc
+
+# Ignore local development settings
+local_settings.py
+
+# Ignore IDE or editor specific files
+.vscode/
+.idea/
+
+# Ignore any log files
+*.log
+
+# Ignore any cache directories
+__pycache__/
