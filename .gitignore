@@ -15,4 +15,4 @@ local_settings.py
 *.log
 
 # Ignore any cache directories
-__pycache__/
+__pycache__
