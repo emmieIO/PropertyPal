@@ -1,2 +1,2 @@
-# PorpertyPal
+# PropertyPal
 All requirement installed.
