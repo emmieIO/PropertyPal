@@ -104,7 +104,6 @@ ipython_config.py
 #Pipfile.lock
 
 # Environments
-.env
 .venv
 env/
 venv/
