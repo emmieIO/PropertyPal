@@ -11,7 +11,7 @@ https://docs.djangoproject.com/en/5.0/ref/settings/
 """
 
 from pathlib import Path
-import dj_database_url
+# import dj_database_url
 
 # Build paths inside the project like this: BASE_DIR / 'subdir'.
 BASE_DIR = Path(__file__).resolve().parent.parent
@@ -24,9 +24,9 @@ BASE_DIR = Path(__file__).resolve().parent.parent
 SECRET_KEY = 'django-insecure-%gz0_dy=$iewe^68n19ki!6aho9$r1#z7xbb$1o(_qy7qi@!f*'
 
 # SECURITY WARNING: don't run with debug turned on in production!
-DEBUG = False
+DEBUG = True
 
-ALLOWED_HOSTS = ["localhost"]
+ALLOWED_HOSTS = []
 
 
 # Application definition
@@ -38,6 +38,7 @@ INSTALLED_APPS = [
     'django.contrib.sessions',
     'django.contrib.messages',
     'django.contrib.staticfiles',
+    'tenants',
 ]
 
 MIDDLEWARE = [
@@ -75,16 +76,16 @@ WSGI_APPLICATION = 'core.wsgi.application'
 # https://docs.djangoproject.com/en/5.0/ref/settings/#databases
 
 DATABASES = {
-    # 'default': {
-    #     'ENGINE': 'django.db.backends.sqlite3',
-    #     'NAME': BASE_DIR / 'db.sqlite3',
-    # }
+      'default': {
+         'ENGINE': 'django.db.backends.sqlite3',
+         'NAME': BASE_DIR / 'db.sqlite3',
+    }
     
-     'default': dj_database_url.config(
+    # 'default': dj_database_url.config(
         # Replace this value with your local database's connection string.
-        default='postgres://propertypal_user:GpEg9kaDKVt4PLMsCRXzjGR0DYF8UgNO@dpg-cnt73uun7f5s73f7f6fg-a.oregon-postgres.render.com/propertypal',
-        conn_max_age=600
-    )
+     #   default='postgres://propertypal_user:GpEg9kaDKVt4PLMsCRXzjGR0DYF8UgNO@dpg-cnt73uun7f5s73f7f6fg-a.oregon-postgres.render.com/propertypal',
+      #  conn_max_age=600
+   # )
 }
 
 
@@ -128,3 +129,14 @@ STATIC_URL = 'static/'
 # https://docs.djangoproject.com/en/5.0/ref/settings/#default-auto-field
 
 DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
+
+# API Authentication and Authorization
+REST_FRAMEWORK = {
+    'DEFAULT_AUTHENTICATION_CLASSES': (
+        'rest_framework.authentication.TokenAuthentication',  # Example: Token Authentication
+        'rest_framework.authentication.SessionAuthentication',  # Example: Session Authentication
+    ),
+    'DEFAULT_PERMISSION_CLASSES': (
+        'rest_framework.permissions.IsAuthenticated',  # Example: Require authenticated users
+    ),
+}

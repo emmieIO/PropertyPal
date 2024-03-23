@@ -1,0 +1,19 @@
+<!-- tenant_list.html -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Tenant List</title>
+</head>
+<body>
+    <h1>Tenant List:</h1>
+    <ul>
+    {% for tenant in display_tenants %}
+    <li>{{ tenant.firstname }} {{ tenant.lastname }}</li>
+    {% endfor %}
+    </ul>
+
+
+</body>
+</html>
+
