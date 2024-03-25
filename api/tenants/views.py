@@ -1,21 +1,20 @@
-# views.py in the 'tenants' app
+# tenants/views.py
 from django.shortcuts import render
-# Create views using DRF's generic views
-from rest_framework import generics
-from rest_framework.permissions import IsAuthenticated
+from rest_framework import viewsets
 from .models import Tenant
 from .serializers import TenantSerializer
 
-class TenantListCreate(generics.ListCreateAPIView):
+
+class TenantViewSet(viewsets.ModelViewSet):
     queryset = Tenant.objects.all()
     serializer_class = TenantSerializer
-    permission_classes = [IsAuthenticated]
 
-class TenantRetrieveUpdateDestroy(generics.RetrieveUpdateDestroyAPIView):
-    queryset = Tenant.objects.all()
-    serializer_class = TenantSerializer
-    permission_classes = [IsAuthenticated]
-
+def api_documentation(request):
+    tenants = Tenant.objects.all()
+    context = {
+        'tenants': tenants,
+    }
+    return render(request, 'tenants/api.html', context)
 
 def tenant_list(request):
     get_all_tenants = Tenant.objects.all()

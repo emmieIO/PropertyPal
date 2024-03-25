@@ -57,7 +57,10 @@ ROOT_URLCONF = 'core.urls'
 TEMPLATES = [
     {
         'BACKEND': 'django.template.backends.django.DjangoTemplates',
-        'DIRS': [],
+        'DIRS': [
+			# Add the path to Django REST Framework's templates directory
+            '/home/vagrant/my_propertypal/lib/python3.10/site-packages/rest_framework/templates/rest_framework',
+            ],
         'APP_DIRS': True,
         'OPTIONS': {
             'context_processors': [
