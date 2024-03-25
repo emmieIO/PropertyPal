@@ -1,0 +1,100 @@
+POST http://localhost:8000/api/auth/landlord/
+Content-Type: application/json
+
+{
+    "username":"mekuz",
+    "email":"landlord2@test.com",
+    "password":"landlord2"
+}
+###
+POST http://localhost:8000/api/auth/landlord/login
+Content-Type: application/json
+
+{
+    "username":"emmie",
+    "password":"12345"
+}
+###
+
+# POST Request to Create a New Property###
+### Create a New Property (Authenticated as ADMIN or LANDLORD)
+###
+
+POST http://localhost:8000/api/properties/create
+Content-Type: application/json
+Authorization: Token 5fe20a7e22c48507bc595e67910da6adb7cfb52e
+
+{
+  "property_name": "New Property",
+  "address": "123 Main St",
+  "rent_amount": 1500,
+  "property_type": null,
+  "status": "For Rent",
+  "payment_date": "2024-03-25T12:00:00Z",
+  "description": "A beautiful property for rent."
+}
+
+# POST Request to Create a New Property###
+### Create a New Property (Authenticated as ADMIN or LANDLORD)
+###
+
+PUT http://localhost:8000/api/properties/update/2
+Content-Type: application/json
+Authorization: Token 5fe20a7e22c48507bc595e67910da6adb7cfb52e
+
+{
+  "property_name": "Property 3",
+  "address": "456 Broasdway street",
+  "rent_amount": 1500,
+  "property_type": null,
+  "status": "For Rent",
+  "payment_date": "2024-03-25T12:00:00Z",
+  "description": "A beautiful property for rent."
+}
+
+###
+### Create a New Property Type (Authenticated)
+###
+
+POST http://localhost:8000/api/properties/create-type
+Content-Type: application/json
+Authorization: Token e0c4701ef95525b5d879e1448f06120f805766b7
+
+{
+  "name": "Shop space"
+}
+
+###
+### Update a New Property Type (Authenticated)
+###
+
+PUT http://localhost:8000/api/properties/upadte-type/1
+Content-Type: application/json
+Authorization: Token e0c4701ef95525b5d879e1448f06120f805766b7
+
+{
+  "name": "Store Space"
+}
+
+###
+### Delete a New Property Type (Authenticated)
+###
+
+DELETE http://localhost:8000/api/properties/destroy/type/2
+Content-Type: application/json
+Authorization: Token e0c4701ef95525b5d879e1448f06120f805766b7
+
+{}
+
+
+
+###
+### Create a New Property Type (Authenticated)
+###
+DELETE http://localhost:8000/api/properties/destroy/1
+Content-Type: application/json
+Authorization: Token 5fe20a7e22c48507bc595e67910da6adb7cfb52e
+
+{}
+
+ 
