@@ -19,4 +19,7 @@ __pycache__
 
 .rest
 .http
-db1.sqlite3
+db.sqlite3
+
+**/migrations/*.py
+**/migrations/*.pyc
