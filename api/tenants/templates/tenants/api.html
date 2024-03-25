@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title></title>
+</head>
+<body>
+   {% extends 'rest_framework/base.html' %}
+
+   {% block content %}
+    <h1>Welcome to the API</h1>
+    <p>This is the API documentation for your application:</p>
+    <!-- Add your custom content here -->
+   <h1>Tenant List are:</h1>
+    <ul>
+    {% for tenant in tenants %}
+    <li>{{ tenant.firstname }} {{ tenant.lastname }}</li>
+    {% endfor %}
+    </ul> 
+   {% endblock %}
+
+</body>
+</html>
