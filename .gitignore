@@ -19,3 +19,4 @@ __pycache__
 
 .rest
 .http
+db1.sqlite3
