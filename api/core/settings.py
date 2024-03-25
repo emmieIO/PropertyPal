@@ -11,7 +11,11 @@ https://docs.djangoproject.com/en/5.0/ref/settings/
 """
 
 from pathlib import Path
+<<<<<<< HEAD
 
+=======
+# import dj_database_url
+>>>>>>> dc10ed235ceca2c9202e7ee5589c6f9fd02400b5
 
 # Build paths inside the project like this: BASE_DIR / 'subdir'.
 BASE_DIR = Path(__file__).resolve().parent.parent
@@ -42,6 +46,7 @@ INSTALLED_APPS = [
     "rest_framework",
     "rest_framework.authtoken",
     "properties",
+    'tenants',
 ]
 
 MIDDLEWARE = [
@@ -79,10 +84,23 @@ WSGI_APPLICATION = "core.wsgi.application"
 # https://docs.djangoproject.com/en/5.0/ref/settings/#databases
 
 DATABASES = {
+<<<<<<< HEAD
     'default': {
         'ENGINE': 'django.db.backends.sqlite3',
         'NAME': BASE_DIR / 'db.sqlite3',
     }
+=======
+      'default': {
+         'ENGINE': 'django.db.backends.sqlite3',
+         'NAME': BASE_DIR / 'db.sqlite3',
+    }
+    
+    # 'default': dj_database_url.config(
+        # Replace this value with your local database's connection string.
+     #   default='postgres://propertypal_user:GpEg9kaDKVt4PLMsCRXzjGR0DYF8UgNO@dpg-cnt73uun7f5s73f7f6fg-a.oregon-postgres.render.com/propertypal',
+      #  conn_max_age=600
+   # )
+>>>>>>> dc10ed235ceca2c9202e7ee5589c6f9fd02400b5
 }
 
 
@@ -125,5 +143,20 @@ STATIC_URL = "static/"
 # Default primary key field type
 # https://docs.djangoproject.com/en/5.0/ref/settings/#default-auto-field
 
+<<<<<<< HEAD
 DEFAULT_AUTO_FIELD = "django.db.models.BigAutoField"
 AUTH_USER_MODEL = "user.User"
+=======
+DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
+
+# API Authentication and Authorization
+REST_FRAMEWORK = {
+    'DEFAULT_AUTHENTICATION_CLASSES': (
+        'rest_framework.authentication.TokenAuthentication',  # Example: Token Authentication
+        'rest_framework.authentication.SessionAuthentication',  # Example: Session Authentication
+    ),
+    'DEFAULT_PERMISSION_CLASSES': (
+        'rest_framework.permissions.IsAuthenticated',  # Example: Require authenticated users
+    ),
+}
+>>>>>>> dc10ed235ceca2c9202e7ee5589c6f9fd02400b5
