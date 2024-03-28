@@ -18,7 +18,7 @@ body{
     width: 100%;
     height: 100vh;
     position: relative;
-    overflow-x: hidden;
+    overflow: hidden;
 }
 main{
     width: 85%;
@@ -54,7 +54,7 @@ a{
     text-decoration: none;
 }
 input{
-    border: 1px solid var(--Secondary-Colour,#006167);
+    border: 1px solid var(--Secondary-Colour,#152238);
 }
 ::placeholder{
     color: var(--Subwords, rgba(18, 18, 18, 0.70));
@@ -68,6 +68,7 @@ input{
 .left, .right{
     width: 50%;
 }
+
 
 .img-div {
     display: flex;
@@ -163,7 +164,7 @@ input[type='button']{
     padding: 5%;
     border-radius: 10px;
     margin-top: 1%;
-    background: var(--Secondary-Colour, #006167);
+    background: var(--Secondary-Colour, #152238);
     color: white;
     font-size: 1.25rem;
     border: none;
@@ -207,8 +208,8 @@ input[type='button']{
     right: -80px;
 }
 .yellow{
-    width: 250px;
-    height: 250px;
+    width: 200px;
+    height: 200px;
     flex-shrink: 0;
     border-radius: 50%;
     background:var(--secondary);
@@ -343,8 +344,8 @@ input[type='button']{
         right: -30px;
     }
     .yellow{
-        width: 250px;
-        height: 250px;
+        width: 150px;
+        height: 150px;
         right: -80px;
     }
 }
