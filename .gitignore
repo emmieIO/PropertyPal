@@ -16,3 +16,10 @@ local_settings.py
 
 # Ignore any cache directories
 __pycache__
+
+.rest
+.http
+db.sqlite3
+
+**/migrations/*.py
+**/migrations/*.pyc
