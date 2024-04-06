@@ -33,6 +33,7 @@ main{
   
 
 }
+
 h3{
     color: var(--Secondary-Colour);
     text-align: center;
@@ -47,7 +48,7 @@ h4{
     font-size: 1.5rem;
     font-style: normal;
     font-weight: 400;
-    line-height: 1rem; /* 120% */
+    line-height: 1rem;
     margin-top: 2%;
 }
 a{
@@ -98,11 +99,11 @@ input{
 }
 
 .content .logo{
-    width: 30%;
+    width: 20%;
 }
 .content .logo img{
     width: 100%;
-    
+    margin-top: 10px;
 }
 .half-width{
     
@@ -110,14 +111,13 @@ input{
     margin-top: 4%;
     width: 90%;
     display: flex;
+    margin-left: 20px;
 }
 .half-width input{
     width: 80%;
     
 
 }
-
-
  .check{
     width: 100%;
     display: flex;
@@ -142,6 +142,7 @@ form span{
 .full_width{
     display: flex;
     flex-direction: column;
+    margin-left: 18px;
     width: 100%;
 }
 input[type='password']{
@@ -149,8 +150,8 @@ input[type='password']{
 }
 .fa-eye-slash{
     position: absolute;
-    right: 25%;
-    top: 52.0%;
+    right: 23%;
+    top: 59%;
 }
 input:not([type='checkbox']):not([type='button']) {
     padding: 4.5%;
@@ -208,8 +209,8 @@ input[type='button']{
     right: -80px;
 }
 .yellow{
-    width: 200px;
-    height: 200px;
+    width: 220px;
+    height: 220px;
     flex-shrink: 0;
     border-radius: 50%;
     background:var(--secondary);
@@ -335,8 +336,20 @@ input[type='button']{
         width:80%
     }
     .fa-eye-slash{
-        right: 20%;
-        top: 47%;
+        right: 14%;
+        top: 57.5%;
+    }
+    .check{
+      width: 80%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      gap: 3.10px;
+      margin-left: 32px;
+    }
+    
+    #terms {
+      margin-bottom: 18px;
     }
     .green{
         width: 100px;
@@ -366,14 +379,14 @@ input[type='button']{
         margin-inline: 0;
     }
     .fa-eye-slash{
-        right: 32%;
-        top: 55.5%;
+        right: 27%;
+        top: 62.5%;
     }
   }
   @media (max-width: 480px) {
     .fa-eye-slash{
-        right: 20%;
-        top: 49%;
+        right: 12%;
+        top: 58%;
     }
   }
   @media (max-width: 375px) {
