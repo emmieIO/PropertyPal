@@ -1,0 +1,82 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500&family=Nunito+Sans:opsz,wght@6..12,200;6..12,300;6..12,400;6..12,500&family=Public+Sans:wght@200;300;400&family=Roboto:wght@400;500;700&display=swap');
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    
+}
+/* ROOT VARIABLES */
+:root{
+    --Secondary-Colour:#152238;
+    --PRIMARY-COLOUR:#FABF00;
+    --Unsecondary-Colour:#FFF;
+}
+body{
+    font-family: 'Nunito', sans-serif;
+}
+
+/* NAVIGATION BAR */
+
+.navbar .nav-link {
+    color: #fff;
+}
+
+.navbar .nav-link:hover,
+.navbar .nav-link:focus {
+    color: #fff;
+    text-decoration: none;
+}
+.home{
+    color: var(--PRIMARY-COLOUR) !important;
+}
+.navbar.active .nav-link {
+    color: #555;
+}
+.dropdown-toggle::after {
+    border-top-color: var(--PRIMARY-COLOUR)!important; /* Change this to your desired color */
+}
+
+.navbar.active .nav-link:hover,
+.navbar.active .nav-link:focus {
+    color: #555;
+    text-decoration: none;
+}
+
+.navbar.active .navbar-brand {
+    color: #555;
+}
+  .dropdown-menu .dropdown-item{
+    color: var(--Secondary-Colour)!important; 
+  }
+.container-fluid img{
+    width: 100px;
+    height: 100px;
+    flex-shrink: 0;
+    backdrop-filter: blur(2px);
+}
+.navbar .navbar-nav{
+    
+    display: flex ;
+    /* height: 100px; */
+    padding: 10px 10px 10px 0px;
+    justify-content: center;
+    align-items: center;
+    gap: 15px;
+    flex: 1 0 0;
+    border-radius: 5px 0px 0px 5px;
+    background: var(--Secondary-Colour);
+}
+.navbar .navbar-nav .nav-item a{
+    display: flex;
+    padding: 10px;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+    border-radius: 5px;
+    color: var(--Unsecondary-Colour);
+
+    font-size: 19px;
+    font-style: normal;
+    font-weight: 400;
+    
+}
