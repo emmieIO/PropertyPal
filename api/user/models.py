@@ -9,6 +9,8 @@ class User(AbstractUser):
         ADMIN = "ADMIN", "Admin"
         LANDLORD = "LANDLORD", "Landlord"
         TENANT = "TENANT", "Tenant"
+        # remember to remove these lines below
+        AGENT = 'AGENT', 'Agent'
 
     base_role = Role.ADMIN
     role = models.CharField(max_length=50, choices=Role.choices)

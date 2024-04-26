@@ -11,8 +11,8 @@ class Tenant(User):
 
 
     def __str__(self):
-        return f"{self.firstname} {self.lastname}"
-    
+        return f"{self.TENANT}"
+
 class TenantManager(models.Manager):
     def get_queryset(self, *args, **kwargs):
         results = super().get_queryset(*args, **kwargs)
